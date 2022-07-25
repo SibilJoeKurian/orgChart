@@ -1,21 +1,26 @@
 <template>
     <div class="slds-grid slds-wrap">
-        <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
-            <c-org-chart-toggle-button onclickhanlder={handleClick} level={level}></c-org-chart-toggle-button>
-        </div>
-        <template if:true={toggle}>
-            <template for:each={contactData} for:item="contact">
-                <div key={contact.uId} class="slds-col slds-size_3-of-12 slds-p-around_x-small">
-                    <c-org-chart-lightning-card 
-                        key={contact.uId} 
-                        name={contact.name} 
-                        email={contact.email}
-                        title={contact.title}>
-                    </c-org-chart-lightning-card>
+       
+            <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
+                <c-org-chart-toggle-button onclickhanlder={handleClick} level={level}></c-org-chart-toggle-button>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
+                <div class="slds-grid slds-wrap">
+                    <template if:true={toggle}>
+                        <template for:each={contactData} for:item="contact">
+                            <div key={contact.uId} class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                                <c-org-chart-lightning-card 
+                                    key={contact.uId} 
+                                    name={contact.name} 
+                                    email={contact.email}
+                                    title={contact.title}>
+                                </c-org-chart-lightning-card>
+                            </div>
+                        </template>
+                    </template>
                 </div>
-            </template>    
-        </template>
-
+            </div>
+        
     </div>
     
     
