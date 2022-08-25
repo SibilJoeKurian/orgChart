@@ -9,9 +9,7 @@ export default class OrgChartLightningCard extends NavigationMixin(LightningElem
     @api birthMonth;
     @api birthDay;
     @api photo;
-    rendercallback(){
-        console.log('::: '+this.photo)
-    }
+    
     viewRecord(event) {
         let url = window.location.origin +'/'+event.currentTarget.dataset.id;
         window.open(url,'_blank').focus();
