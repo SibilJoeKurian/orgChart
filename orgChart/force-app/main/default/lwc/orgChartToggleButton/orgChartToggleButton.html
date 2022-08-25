@@ -1,11 +1,11 @@
 <template>
-    <button class="slds-button slds-section__title-action" onclick={handleOnClickToggle}>
-        <template if:false={toggle}>
+    <button class="slds-button slds-section__title-action" onclick={handleOnClickToggle} >
+        <template if:false={getToggle}>
         <lightning-icon class="icon-close" icon-name="utility:chevronright" size="xx-small"></lightning-icon>
         </template>
-        <template if:true={toggle}>
+        <template if:true={getToggle}>
         <lightning-icon class="icon-open" icon-name="utility:chevrondown" size="xx-small"></lightning-icon>
         </template>
-        {level}
+        {level} {count}
     </button>
 </template>
