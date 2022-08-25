@@ -1,28 +1,27 @@
 <template>
-    <div class="slds-grid slds-wrap">
-       
+    <div class="slds-grid slds-wrap">  
             <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
-                <c-org-chart-toggle-button onclickhanlder={handleClick} level={level}></c-org-chart-toggle-button>
+                <c-org-chart-toggle-button onclickhanlder={handleClick} level={currentLevel} count={length}></c-org-chart-toggle-button>
             </div>
             <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
                 <div class="slds-grid slds-wrap">
                     <template if:true={toggle}>
-                        <template for:each={contactData} for:item="contact">
-                            <div key={contact.uId} class="slds-col slds-size_3-of-12 slds-p-around_x-small">
+                        <template for:each={chartData} for:item="profile">
+                            <div key={profile.Id} class="slds-col slds-size_3-of-12 slds-p-around_x-small">
                                 <c-org-chart-lightning-card 
-                                    key={contact.uId} 
-                                    name={contact.name} 
-                                    email={contact.email}
-                                    title={contact.title}>
+                                    key={profile.Id} 
+                                    name={profile.name} 
+                                    email={profile.email}
+                                    profile-id={profile.Id}
+                                    hire-date={profile.hireDate}
+                                    birth-month={profile.birthMonth}
+                                    birth-day={profile.birthDay}>
                                 </c-org-chart-lightning-card>
                             </div>
                         </template>
                     </template>
                 </div>
             </div>
-        
     </div>
-    
-    
 
 </template>

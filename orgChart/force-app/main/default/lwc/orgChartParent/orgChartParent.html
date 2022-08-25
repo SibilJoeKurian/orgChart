@@ -1,17 +1,10 @@
 <template>
    <div style="background-color:white;">
-    <c-org-chart-section level="Level One" contact-data={levelOne}>
-    </c-org-chart-section>
-   
-    <c-org-chart-section level="Level Two" contact-data={levelTwo}>
-    </c-org-chart-section>
     
-    <c-org-chart-section level="Level Three" contact-data={levelThree}>
-    </c-org-chart-section>
-   
-    <c-org-chart-section level="Level Four" contact-data={levelFour}>
-    </c-org-chart-section>
-    <c-org-chart-section level="Level Five" contact-data={levelFive}>
-    </c-org-chart-section>
+    <template for:each={chartData} for:item="item">
+        <c-org-chart-section key={item.key} level={item.roleLevel} chart-data={item.singleLevel} >
+        </c-org-chart-section> 
+    </template>   
+    
     </div> 
 </template>

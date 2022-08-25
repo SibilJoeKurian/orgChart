@@ -5,9 +5,14 @@
                 <lightning-icon icon-name="action:user" alternative-text="Delete" title="Delete"></lightning-icon>
             </div>
             <div class="slds-col slds-size_9-of-12">
-                <p class="slds-p-horizontal_small slds-text-title_bold">{name}</p>
-                <p class="slds-p-horizontal_small">{email}</p>
-                <p class="slds-p-horizontal_small">{title}</p>
+                <a href="#" class="slds-p-horizontal_small slds-text-title_bold" onclick={viewRecord}  data-id={profileId}>
+                    <span>{name}</span>
+                </a>
+                <p class="slds-p-horizontal_small">Email: {email}</p>
+                <p class="slds-p-horizontal_small">Bith Day:{birthDay}</p>
+                <p class="slds-p-horizontal_small">Bith Month:{birthMonth}</p>
+                <p class="slds-p-horizontal_small">Hire Date:{hireDate}</p>
+                
             </div>
         </div>
     </lightning-card>

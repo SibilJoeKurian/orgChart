@@ -1,0 +1,8 @@
+<template>
+    <div style="background-color:white;">
+        <template for:each={chartDataDS} for:item="item">
+            <c-org-chart-section key={item.level} level={item.title} contact-data={item.data}>
+            </c-org-chart-section> 
+        </template>   
+    </div>
+</template>

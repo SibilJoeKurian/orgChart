@@ -1,10 +1,16 @@
 import { LightningElement,api } from 'lwc';
 
 export default class OrgChartSection extends LightningElement {
-    toggle = false;
+    @api toggle = false;
     @api level;
-    @api contactData;
+    @api chartData;
     handleClick(event){
         this.toggle = event.detail;
+    }
+    get getToggle(){
+        return this.toggle;
+    }
+    get currentLevel(){
+        return this.level;
     }
 }
