@@ -2,7 +2,8 @@
     <lightning-card>
         <div class="slds-grid slds-wrap">
             <div class="slds-col slds-size_3-of-12 slds-p-left_small">
-                <lightning-icon icon-name="action:user" alternative-text="Delete" title="Delete"></lightning-icon>
+                <lightning-formatted-rich-text value={getPhoto}>
+                </lightning-formatted-rich-text>
             </div>
             <div class="slds-col slds-size_9-of-12">
                 <a href="#" class="slds-p-horizontal_small slds-text-title_bold" onclick={viewRecord}  data-id={profileId}>

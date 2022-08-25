@@ -11,7 +11,8 @@ public class chartData {
         @AuraEnabled public String title {get; set;}  
         @AuraEnabled public String hireDate {get; set;}
         @AuraEnabled public String birthMonth {get; set;}
-        @AuraEnabled public String birthDay {get; set;}     
+        @AuraEnabled public String birthDay {get; set;}  
+        @AuraEnabled public String photo {get;set;}   
     }
     public chartData(String roleLevel,Integer key){
         this.singleLevel = new List<singleLightningCardData>();

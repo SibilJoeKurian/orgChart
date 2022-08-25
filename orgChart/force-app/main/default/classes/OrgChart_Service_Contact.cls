@@ -2,7 +2,7 @@ public with sharing class OrgChart_Service_Contact implements OrgChart_Interface
     public static List<Contact> getAllRecords(){
         return [SELECT Id,name,email,Role__c,
                 CDC_Title__c,Birthdate,Birth_Month__c,
-                Bith_Day__c
+                Bith_Day__c,Photo__c
                 FROM Contact 
                 WHERE CDC_Title__c !=null 
                 ORDER BY CDC_Title_Level__c ];
@@ -26,6 +26,7 @@ public with sharing class OrgChart_Service_Contact implements OrgChart_Interface
             newPersonData.hireDate = String.ValueOf(cont.Birthdate);
             newPersonData.birthMonth = cont.Birth_Month__c;
             newPersonData.birthDay = cont.Bith_Day__c;
+            newPersonData.photo = cont.Photo__c;
             chartData.getLightningCard(cont.CDC_Title__c,chartDataList).add(newPersonData);              
         }   
         return chartDataList;
