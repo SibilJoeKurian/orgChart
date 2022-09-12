@@ -2,7 +2,7 @@
    <div style="background-color:white;">
     
     <template for:each={chartData} for:item="item">
-        <c-org-chart-section key={item.key} level={item.roleLevel} chart-data={item.singleLevel} >
+        <c-org-chart-section key={item.key} level={item.roleLevel} chart-data={item.singleLevel} count={item.count}>
         </c-org-chart-section> 
     </template>   
     

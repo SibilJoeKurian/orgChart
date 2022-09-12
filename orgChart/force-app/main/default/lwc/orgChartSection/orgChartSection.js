@@ -4,6 +4,7 @@ export default class OrgChartSection extends LightningElement {
     @api toggle = false;
     @api level;
     @api chartData;
+    @api count;
     handleClick(event){
         this.toggle = event.detail;
     }

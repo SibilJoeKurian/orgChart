@@ -2,16 +2,21 @@
     <lightning-card>
         <div class="slds-grid slds-wrap">
             <div class="slds-col slds-size_3-of-12 slds-p-left_small">
+            <template if:true={getPhoto}>
                 <lightning-formatted-rich-text value={getPhoto}>
-                </lightning-formatted-rich-text>
+                </lightning-formatted-rich-text>     
+            </template>
+            <template if:false={getPhoto}>
+                <lightning-icon icon-name="action:user" ></lightning-icon>
+            </template>
             </div>
             <div class="slds-col slds-size_9-of-12">
                 <a href="#" class="slds-p-horizontal_small slds-text-title_bold" onclick={viewRecord}  data-id={profileId}>
                     <span>{name}</span>
                 </a>
                 <p class="slds-p-horizontal_small">Email: {email}</p>
-                <p class="slds-p-horizontal_small">Bith Date:{birthDay}/{getMonth}</p>
-                <p class="slds-p-horizontal_small">Hire Date:{hireDate}</p>
+                <p class="slds-p-horizontal_small">Bith Date: {birthDay} - {getMonth}</p>
+                <p class="slds-p-horizontal_small">Hire Date: {hireDate}</p>
                 
             </div>
         </div>

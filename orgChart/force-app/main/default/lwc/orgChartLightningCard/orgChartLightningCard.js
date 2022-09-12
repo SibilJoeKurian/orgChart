@@ -20,6 +20,10 @@ export default class OrgChartLightningCard extends NavigationMixin(LightningElem
         return MONTH_MAP[this.birthMonth];
     } 
 
+    get checkPhoto(){
+        return this.photo?true:false;
+    }
+
     get getPhoto(){
         return this.photo;
     }
